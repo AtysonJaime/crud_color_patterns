@@ -1,0 +1,10 @@
+{
+  "titleButtonSwitch": "Switch to English",
+  "loginPage": {
+    "loginEntrada": "Realize seu login para acessar o sistema de criação de padronizações de cores.",
+    "readme": "README_PT-BR.md",
+    "introducaoLogin": "Instruções para Login",
+    "labelPassword": "Senha",
+    "titleShowPassword": "Mostrar Senha"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "titleButtonSwitch": "Mudar para Português",
+  "loginPage": {
+    "loginEntrada": "Login to access the color patterns creation system.",
+    "readme": "README.md",
+    "introducaoLogin": "Login Instructions",
+    "labelPassword": "Password",
+    "titleShowPassword": "Show Password"
+  }
+}

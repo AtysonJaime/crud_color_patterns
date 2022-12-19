@@ -1,24 +1,51 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'crud_color_patterns',
+    title: 'Color Patterns',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'pt-br',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
+      {
+        hid: 'designer',
+        name: 'designer',
+        content: 'Atyson Jaime <atysonjaime@gmail.com>',
+      },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href:
+          process.env.NODE_ENV === 'production'
+            ? '/crud_color_patterns/favicon.ico'
+            : 'favicon.ico',
+      },
+      {
+        rel: 'preconnect',
+        href: 'https://fonts.googleapis.com',
+      },
+      {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+        crossorigin: true,
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap',
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['@fortawesome/fontawesome-svg-core/styles.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['~/plugins/font-awesome-vue.js', '~/plugins/vue-i18n.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -35,12 +62,93 @@ export default {
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/auth-next',
+    '@nuxtjs/toast',
+    '@nuxtjs/i18n',
   ],
+
+  i18n: {
+    locales: [
+      { code: 'pt', iso: 'pt-BR', file: 'pt.json' },
+      { code: 'en', iso: 'en-US', file: 'en.json' },
+    ],
+    seo: false,
+    lazy: true,
+    langDir: 'locales/',
+    defaultLocale: 'pt',
+    skipSettingLocaleOnNavigate: true,
+    vueI18n: {
+      fallbackLocale: 'pt',
+    },
+  },
+
+  auth: {
+    strategies: {
+      local: {
+        scheme: 'refresh',
+        localStorage: {
+          prefix: 'auth.',
+        },
+        token: {
+          prefix: 'access_token.',
+          property: 'access_token',
+          maxAge: 86400,
+          type: 'Bearer',
+        },
+        refreshToken: {
+          prefix: 'refresh_token.',
+          property: 'refresh_token',
+          data: 'refresh_token',
+          maxAge: 60 * 60 * 24 * 15,
+        },
+        user: {
+          property: 'user',
+          autoFetch: true,
+        },
+        endpoints: {
+          login: { url: '/login_json', method: 'post' },
+          user: false,
+        },
+      },
+    },
+  },
+
+  middleware: 'auth',
+
+  toast: {
+    position: 'top-center',
+    iconPack: 'fontawesome',
+    duration: 3000,
+    register: [
+      {
+        name: 'defaultSuccess',
+        message: (payload) =>
+          !payload.msg ? 'Operação bem sucedida' : payload.msg,
+        options: {
+          type: 'success',
+          icon: 'check',
+        },
+      },
+      {
+        name: 'defaultError',
+        message: (payload) =>
+          !payload.msg ? 'Oops.. Erro inesperado' : payload.msg,
+        options: {
+          type: 'error',
+          icon: 'times',
+        },
+      },
+    ],
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/',
+    baseURL: 'https://sys-dev.searchandstay.com/api/admin',
+  },
+
+  styleResources: {
+    scss: ['assets/sass/main.scss'],
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
