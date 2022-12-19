@@ -6,5 +6,8 @@
     "introducaoLogin": "Instruções para Login",
     "labelPassword": "Senha",
     "titleShowPassword": "Mostrar Senha"
+  },
+  "headerPage": {
+    "titleButtonLogoff": "Sair do sistema"
   }
 }
