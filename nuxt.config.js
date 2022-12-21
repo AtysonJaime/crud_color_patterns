@@ -85,25 +85,15 @@ export default {
   auth: {
     strategies: {
       local: {
-        scheme: 'refresh',
-        localStorage: {
-          prefix: 'auth.',
-        },
         token: {
-          prefix: 'access_token.',
-          property: 'access_token',
-          maxAge: 86400,
+          property: 'token',
+          global: true,
+          required: true,
           type: 'Bearer',
         },
-        refreshToken: {
-          prefix: 'refresh_token.',
-          property: 'refresh_token',
-          data: 'refresh_token',
-          maxAge: 60 * 60 * 24 * 15,
-        },
         user: {
-          property: 'user',
-          autoFetch: true,
+          property: false,
+          autoFetch: false,
         },
         endpoints: {
           login: { url: '/login_json', method: 'post' },
