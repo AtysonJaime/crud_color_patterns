@@ -1,5 +1,6 @@
 {
   "titleButtonSwitch": "Mudar para Português",
+  "textFeedback": "No items registered, please add one by clicking on the Add button in the header.",
   "loginPage": {
     "loginEntrada": "Login to access the color patterns creation system.",
     "readme": "README.md",
@@ -9,5 +10,6 @@
   },
   "headerPage": {
     "titleButtonLogoff": "System logoff"
-  }
+  },
+  "TablePage": {}
 }

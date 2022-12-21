@@ -68,11 +68,7 @@ export default {
         .then(async (res) => {
           // eslint-disable-next-line no-console
           console.log(res)
-          this.$auth.setUser(res.data.data.result)
-          await this.$auth.setUserToken(
-            res.data.data.result.access_token,
-            res.data.data.result.access_token
-          )
+          await this.$auth.setUserToken(res.data.data.result.access_token)
           this.$toasted.global.defaultSuccess({
             msg: 'Usuário logado com sucesso',
           })

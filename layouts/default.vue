@@ -24,8 +24,13 @@ export default {
 <style lang="scss" scoped>
 .main-content {
   font-family: 'Chivo Mono' !important;
-  display: flex;
   width: 100%;
+  min-height: 100vh;
+  height: 100%;
   background-color: var(--cream);
+
+  .body-content {
+    padding: 1.875rem;
+  }
 }
 </style>
