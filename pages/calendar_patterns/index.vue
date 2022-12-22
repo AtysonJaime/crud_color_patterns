@@ -1,6 +1,6 @@
 <template lang="pug">
   .table-content
-    b-card.card(v-if='isLoading')
+    b-card.card-loading(v-if='isLoading')
       b-skeleton.load-table(animation="wave")
     .content-no-item(v-else-if='colors.length === 0')
       p {{$t('textFeedback')}}
@@ -45,7 +45,7 @@ export default {
 
   created() {
     if (!this.loggedIn) {
-      this.$router.push('/')
+      this.linkRota()
     }
   },
 
@@ -63,7 +63,7 @@ export default {
   overflow: auto;
   background-color: var(--cream);
 
-  .card {
+  .card-loading {
     border: none;
     background-color: var(--white);
     .load-table {

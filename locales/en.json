@@ -1,6 +1,7 @@
 {
   "titleButtonSwitch": "Mudar para Português",
   "textFeedback": "No items registered, please add one by clicking on the Add button in the header.",
+  "buttonCancel": "Cancel",
   "loginPage": {
     "loginEntrada": "Login to access the color patterns creation system.",
     "readme": "README.md",
@@ -11,5 +12,17 @@
   "headerPage": {
     "titleButtonLogoff": "System logoff"
   },
-  "TablePage": {}
+  "TablePage": {
+    "add": "Add",
+    "next": "Next",
+    "prev": "Prev",
+    "page": "Page",
+    "of": "Of"
+  },
+  "deleteModal": {
+    "titleButtonDelete": "Delete Color Pattern",
+    "bodyText": "Do you really want to delete the color pattern",
+    "headerText": "Delete Color Pattern",
+    "buttonDelete": "Delete"
+  }
 }

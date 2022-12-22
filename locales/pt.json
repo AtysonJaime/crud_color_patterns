@@ -1,6 +1,7 @@
 {
   "titleButtonSwitch": "Switch to English",
   "textFeedback": "Nenhum item cadastrado, por favor adicione um clicando no botão Adicionar no header.",
+  "buttonCancel": "Cancelar",
   "loginPage": {
     "loginEntrada": "Realize seu login para acessar o sistema de criação de padronizações de cores.",
     "readme": "README_PT-BR.md",
@@ -11,5 +12,17 @@
   "headerPage": {
     "titleButtonLogoff": "Sair do sistema"
   },
-  "TablePage": {}
+  "TablePage": {
+    "add": "Adicionar",
+    "next": "Próximo",
+    "prev": "Anterior",
+    "page": "Página",
+    "of": "De"
+  },
+  "deleteModal": {
+    "titleButtonDelete": "Deletar padrão de cor",
+    "bodyText": "Você realmente deseja excluir o padrão de cor",
+    "headerText": "Deletar padrão de cor",
+    "buttonDelete": "Excluir"
+  }
 }
