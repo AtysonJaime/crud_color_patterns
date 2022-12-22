@@ -63,4 +63,38 @@ export const actions = {
         commit('SET_ERROR', err.response.status)
       })
   },
+  async newPageColors({ commit }, data) {
+    await this.$axios
+      .get(`/calendar_patterns?${data}`, {
+        headers: {
+          Authorization: localStorage.getItem('auth._token.local'),
+        },
+      })
+      .then((res) => {
+        // eslint-disable-next-line no-console
+        console.log(res)
+        const data = res.data.data
+        const colors = data.entities
+        const total = data.pagination.total_pages
+        const links = data.pagination.links
+        const currentPage = data.pagination.current_page
+        const porPages = data.pagination.per_page
+        commit('SET_COLORS', colors)
+        commit('SET_TOTALPAGES', total)
+        commit('SET_PERPAGES', porPages)
+        commit('SET_CURRENTPAGE', currentPage)
+        commit('SET_LINKS', links)
+        commit('SET_ERROR', 0)
+      })
+      .catch((err) => {
+        // eslint-disable-next-line no-console
+        console.log(err.response)
+        commit('SET_COLORS', [])
+        commit('SET_TOTALPAGES', 1)
+        commit('SET_PERPAGES', 10)
+        commit('SET_CURRENTPAGE', 1)
+        commit('SET_LINKS', { next: null, prev: null })
+        commit('SET_ERROR', err.response.status)
+      })
+  },
 }

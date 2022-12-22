@@ -3,9 +3,9 @@
     template(#header)
       ModalCadastro
       b-button-group.button-group(size='sm')
-        b-button(variant="outline-secondary" @click='prev(links.prev)' :disabled='links.prev === null') {{$t('TablePage.prev')}}
+        b-button(variant="outline-secondary" @click='newPage(links.prev)' :disabled='links.prev === null') {{$t('TablePage.prev')}}
         b-button(disabled) {{$t('TablePage.page') + ' ' + currentPage + ' ' + $t('TablePage.of') + ' ' + totalPages}}
-        b-button(variant="outline-primary" @click='next(links.next)' :disabled='links.next === null') {{$t('TablePage.next')}}
+        b-button(variant="outline-primary" @click='newPage(links.next)' :disabled='links.next === null') {{$t('TablePage.next')}}
     .table-conteiner.table-responsive.mt-4
       table.table.b-table.table-striped(:per-parge='perPage' role='table' aria-busy='false' aria-colcount='4')
         thead(role='rowgroup')
@@ -48,16 +48,31 @@ export default {
       'perPage',
       'currentPage',
       'links',
+      'statusErro',
     ]),
   },
 
   methods: {
-    next(e) {
-      console.log(e)
+    async newPage(e) {
+      try {
+        await this.$store.dispatch(
+          'color_patterns/newPageColors',
+          e.split('?')[1]
+        )
+        if (this.statusErro === 409) {
+          this.$toasted.global.defaultError({
+            msg: `Token Expired`,
+          })
+          this.linkRota()
+        }
+      } catch (error) {
+        // eslint-disable-next-line no-console
+        console.log(error)
+      }
     },
-
-    prev(e) {
-      console.log(e)
+    linkRota(rota = '') {
+      const pushRota = this.locate === 'pt' ? `/${rota}` : `/en/${rota}`
+      this.$router.push(pushRota)
     },
   },
 }
