@@ -1,9 +1,7 @@
 <template lang="pug">
   b-card.shadow(header-tag='header')
     template(#header)
-      b-button.button-adicionar(variant="outline-success")
-        font-awesome-icon(icon="fa-solid fa-plus")
-        | {{$t('TablePage.add')}}
+      ModalCadastro
       b-button-group.button-group(size='sm')
         b-button(variant="outline-secondary" @click='prev(links.prev)' :disabled='links.prev === null') {{$t('TablePage.prev')}}
         b-button(disabled) {{$t('TablePage.page') + ' ' + currentPage + ' ' + $t('TablePage.of') + ' ' + totalPages}}
@@ -30,9 +28,11 @@
 <script>
 import { mapState } from 'vuex'
 import ModalDelete from '~/components/functionality/ModalDelete.vue'
+import ModalCadastro from '~/components/functionality/ModalCadastro.vue'
 export default {
   components: {
     ModalDelete,
+    ModalCadastro,
   },
   data() {
     return {

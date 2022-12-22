@@ -13,7 +13,6 @@
     "titleButtonLogoff": "System logoff"
   },
   "TablePage": {
-    "add": "Add",
     "next": "Next",
     "prev": "Prev",
     "page": "Page",
@@ -24,5 +23,13 @@
     "bodyText": "Do you really want to delete the color pattern",
     "headerText": "Delete Color Pattern",
     "buttonDelete": "Delete"
+  },
+  "addModal": {
+    "add": "Add",
+    "headerText": "Add Color Pattern",
+    "feedbackMensage": "This field is required",
+    "feedbackNumber": "This field must have 6 characters",
+    "feedbackHexColor": "Please enter a valid hex color",
+    "buttonCreate": "Add"
   }
 }

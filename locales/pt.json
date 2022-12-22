@@ -13,7 +13,6 @@
     "titleButtonLogoff": "Sair do sistema"
   },
   "TablePage": {
-    "add": "Adicionar",
     "next": "Próximo",
     "prev": "Anterior",
     "page": "Página",
@@ -24,5 +23,13 @@
     "bodyText": "Você realmente deseja excluir o padrão de cor",
     "headerText": "Deletar padrão de cor",
     "buttonDelete": "Excluir"
+  },
+  "addModal": {
+    "add": "Adicionar",
+    "headerText": "Adicionar padrão de cor",
+    "feedbackMensage": "Esse campo é obrigatorio",
+    "feedbackNumber": "Esse campo precisa ter 6 caracteres",
+    "feedbackHexColor": "Por favor, digite uma cor hexadecima válida",
+    "buttonCreate": "Adicionar"
   }
 }
