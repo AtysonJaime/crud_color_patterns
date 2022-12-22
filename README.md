@@ -45,7 +45,7 @@ To run the project on your machine, perform the following steps:
 
 1. Clone the project on your machine, using a terminal or any other means that makes this possible;
 
-2. Navigate to the project folder;
+2. Navigate to the project folder and open the terminal inside the project;
 
 3. In the terminal, run the following commands:
 

@@ -45,7 +45,7 @@ Para rodar o projeto em sua maquina, realize os seguintes passos:
 
 1. Realize o clone do projeto na sua maquina, utilizando o terminal ou qualquer outro meio que possibilite tal processo;
 
-2. Caminhe até a pasta do projeto;
+2. Caminhe até a pasta do projeto e abra o terminal dentro do projeto;
 
 3. No terminal realize os seguintes comandos:
 
