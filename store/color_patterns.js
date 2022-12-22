@@ -59,7 +59,7 @@ export const actions = {
         commit('SET_TOTALPAGES', 1)
         commit('SET_PERPAGES', 10)
         commit('SET_CURRENTPAGE', 1)
-        commit('SET_LINKS', {})
+        commit('SET_LINKS', { next: null, prev: null })
         commit('SET_ERROR', err.response.status)
       })
   },
