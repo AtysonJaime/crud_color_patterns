@@ -2,7 +2,7 @@
   .content-modal-delete
     b-avatar.button-delete(button @click="modalShow = !modalShow" variant='outline-danger' :title='$t("deleteModal.titleButtonDelete")' :alt='$t("deleteModal.titleButtonDelete")' :v-b-modal='"modal_delete_" + idColor')
       font-awesome-icon(icon="fa-solid fa-trash")
-    b-modal.modal-delete(:id='"modal_delete_" + idColor' v-model='modalShow' hide-footer :title="$t('deleteModal.headerText')")
+    b-modal.modal-delete(centered :id='"modal_delete_" + idColor' v-model='modalShow' hide-footer :title="$t('deleteModal.headerText')")
       .d-block.text-center.font-change
         h4 {{$t('deleteModal.bodyText') + ' ' + idColor}} ?
       .button-actions
@@ -71,5 +71,9 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  button {
+    margin: 0.3125rem;
+  }
 }
 </style>
