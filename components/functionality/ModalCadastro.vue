@@ -136,6 +136,9 @@ export default {
 .modal-header {
   font-family: 'Chivo Mono' !important;
 }
+.icon-font {
+  margin-right: 0.3125rem;
+}
 .previewerColor {
   width: 100%;
   display: flex;
