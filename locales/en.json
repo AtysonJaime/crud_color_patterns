@@ -18,6 +18,10 @@
     "page": "Page",
     "of": "Of"
   },
+  "showPage": {
+    "titleButtonBack": "Back to list",
+    "textBack": "Back"
+  },
   "deleteModal": {
     "titleButtonDelete": "Delete Color Pattern",
     "bodyText": "Do you really want to delete the color pattern",

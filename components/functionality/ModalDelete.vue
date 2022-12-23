@@ -17,6 +17,11 @@ export default {
       type: Number,
       required: true,
     },
+    showPage: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
   },
 
   data() {
@@ -36,6 +41,9 @@ export default {
             msg: 'Success delete',
           })
           await this.$store.dispatch('color_patterns/getColors')
+          if (this.showPage) {
+            this.linkRota('calendar_patterns')
+          }
         })
         .catch((err) => {
           // eslint-disable-next-line no-console

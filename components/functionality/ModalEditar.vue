@@ -48,6 +48,11 @@ export default {
       type: String,
       required: true,
     },
+    showPage: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
   },
   data() {
     return {
@@ -136,6 +141,9 @@ export default {
             this.isLoading = false
             this.modalShow = false
             await this.$store.dispatch('color_patterns/getColors')
+            if (this.showPage) {
+              window.location.reload()
+            }
           })
           .catch((err) => {
             // eslint-disable-next-line no-console

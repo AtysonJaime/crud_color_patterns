@@ -18,6 +18,12 @@
     "page": "Página",
     "of": "De"
   },
+
+  "showPage": {
+    "titleButtonBack": "Voltar para listagem",
+    "textBack": "Voltar"
+  },
+
   "deleteModal": {
     "titleButtonDelete": "Deletar padrão de cor",
     "bodyText": "Você realmente deseja excluir o padrão de cor",
