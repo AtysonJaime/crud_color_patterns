@@ -31,5 +31,10 @@
     "feedbackNumber": "This field must have 6 characters",
     "feedbackHexColor": "Please enter a valid hex color",
     "buttonCreate": "Add"
+  },
+  "editModal": {
+    "titleButtonEdit": "Edit Color Pattern",
+    "headerText": "Edit Color Pattern",
+    "buttonEdit": "Edit"
   }
 }

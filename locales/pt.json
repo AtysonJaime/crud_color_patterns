@@ -31,5 +31,10 @@
     "feedbackNumber": "Esse campo precisa ter 6 caracteres",
     "feedbackHexColor": "Por favor, digite uma cor hexadecima válida",
     "buttonCreate": "Adicionar"
+  },
+  "editModal": {
+    "titleButtonEdit": "Editar padrão de cor",
+    "headerText": "Editar padrão de cor",
+    "buttonEdit": "Editar"
   }
 }
