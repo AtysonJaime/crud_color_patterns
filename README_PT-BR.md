@@ -61,9 +61,24 @@ Para rodar o projeto em sua maquina, realize os seguintes passos:
 
 ## 🖼️ Layout
 
+O layout desenvolvido para o projeto em questão, foi pensando por mim com base nas experiências adquiridas em projetos passados.
+
+Este projeto contem 3 páginas:
+
+- Login;
+  ![Login Page](./assets/img/Login_page.png)
+
+- Visualização geral de todos os itens em Tabela;
+  ![Table Page](./assets/img/Table_page.png)
+
+- Visualização de item especifico em card;
+  ![Show Page](./assets/img/Show_page.png)
+
 ---
 
 ## 🚀 Deploy
+
+O projeto encontra-se hospedado no [GITHUB Pages](https://pages.github.com), Para visualizar, [click aqui!](https://atysonjaime.github.io/crud_color_patterns/)
 
 ---
 
