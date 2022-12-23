@@ -57,10 +57,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.content-modal-delete {
-  .button-delete {
-  }
-}
 .modal {
   font-family: 'Chivo Mono' !important;
 }
@@ -74,6 +70,7 @@ export default {
   flex-wrap: wrap;
   button {
     margin: 0.3125rem;
+    font-family: 'Chivo Mono' !important;
   }
 }
 </style>

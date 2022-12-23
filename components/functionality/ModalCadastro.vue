@@ -28,14 +28,14 @@
         b-button(class="m-2" variant="warning" @click="modalShow = !modalShow") {{$t('buttonCancel')}}
         b-button(class="m-2" variant="outline-success" @click="createColor")
           p(v-if='!isLoading') {{$t('addModal.buttonCreate')}}
-          font-awesome-icon.icon-font(v-else icon="fa-solid fa-circle-notch fa-spin")
+          font-awesome-icon(v-else icon="fa-solid fa-circle-notch fa-spin")
 
 </template>
 
 <script>
-import { mask, tokens } from 'vue-the-mask'
+import { mask } from 'vue-the-mask'
 export default {
-  directives: { mask, tokens },
+  directives: { mask },
   data() {
     return {
       modalShow: false,
@@ -135,9 +135,6 @@ export default {
 .modal,
 .modal-header {
   font-family: 'Chivo Mono' !important;
-}
-.icon-font {
-  margin-right: 0.3125rem;
 }
 .previewerColor {
   width: 100%;
