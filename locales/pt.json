@@ -12,7 +12,7 @@
   "headerPage": {
     "titleButtonLogoff": "Sair do sistema"
   },
-  "TablePage": {
+  "tablePage": {
     "next": "Próximo",
     "prev": "Anterior",
     "page": "Página",

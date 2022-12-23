@@ -3,9 +3,9 @@
     template(#header)
       ModalCadastro
       b-button-group.button-group(size='sm')
-        b-button(variant="outline-secondary" @click='newPage(links.prev)' :disabled='links.prev === null') {{$t('TablePage.prev')}}
-        b-button(disabled) {{$t('TablePage.page') + ' ' + currentPage + ' ' + $t('TablePage.of') + ' ' + totalPages}}
-        b-button(variant="outline-primary" @click='newPage(links.next)' :disabled='links.next === null') {{$t('TablePage.next')}}
+        b-button(variant="outline-secondary" @click='newPage(links.prev)' :disabled='links.prev === null') {{$t('tablePage.prev')}}
+        b-button(disabled) {{$t('tablePage.page') + ' ' + currentPage + ' ' + $t('tablePage.of') + ' ' + totalPages}}
+        b-button(variant="outline-primary" @click='newPage(links.next)' :disabled='links.next === null') {{$t('tablePage.next')}}
     .table-conteiner.table-responsive.mt-4
       table.table.b-table.table-striped(:per-parge='perPage' role='table' aria-busy='false' aria-colcount='4')
         thead(role='rowgroup')
